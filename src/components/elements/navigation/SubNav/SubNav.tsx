@@ -23,7 +23,7 @@ const SubNav = ({ label, href, subLabel, logo }: ISubNav) => {
         _hover={{ bg: useColorModeValue('green.50', 'gray.900') }}
       >
         <Stack direction={'row'} align={'center'}>
-          <Illustration logo={logo as Logo} width={46} height={46} id={`${label}-navitem`} />
+          <Illustration logo={logo as Logo} width={30} height={30} id={`${label}-navitem`} />
           <Box>
             <Text transition={'all .3s ease'} _groupHover={{ color: 'green.400' }} fontWeight={500}>
               {label}

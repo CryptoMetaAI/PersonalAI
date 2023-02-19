@@ -2,30 +2,29 @@ import { Button, Text, HStack, Avatar, Tooltip } from '@chakra-ui/react';
 import { getEllipsisTxt } from 'utils/format';
 import React from 'react';
 import { InjectedConnector } from '@web3-react/injected-connector';
-import { useWeb3React } from "@web3-react/core";
-
+import { useWeb3React } from '@web3-react/core';
 
 const ConnectButton = () => {
-  const { active, account, library, chainId, activate, deactivate } = useWeb3React()
- 
+  const { active, account, library, chainId, activate, deactivate } = useWeb3React();
+
   const injected = new InjectedConnector({
-    supportedChainIds: [1, 5, 97, 10, 42161, 42170],
-  })
+    supportedChainIds: [137, 80001],
+  });
 
   async function connect() {
     try {
-      console.log('connect')
-      await activate(injected)
+      console.log('connect');
+      await activate(injected);
     } catch (ex) {
-      console.log(ex)
+      console.log(ex);
     }
   }
 
   async function disconnect() {
     try {
-      deactivate()
+      deactivate();
     } catch (ex) {
-      console.log(ex)
+      console.log(ex);
     }
   }
 
@@ -47,10 +46,10 @@ const ConnectButton = () => {
 
   return (
     <Tooltip label={'Current supported network: Arbitrum-One/Nova, Optimism and BSC-Testnet.'}>
-      <Button onClick={() => wallet()} colorScheme='teal' variant='outline'>
+      <Button onClick={() => wallet()} colorScheme="teal" variant="outline">
         Connect Wallet
-      </Button>  
-    </Tooltip>  
+      </Button>
+    </Tooltip>
   );
 };
 

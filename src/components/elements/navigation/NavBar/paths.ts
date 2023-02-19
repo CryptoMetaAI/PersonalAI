@@ -2,8 +2,22 @@ import { ISubNav } from '../SubNav/SubNav';
 
 const NAV_LINKS: ISubNav[] = [
   { label: 'Home', href: '/' },
-  { label: 'Fans NFT List', href: '/fansNFTContractList' },
-  { label: 'Market', href: '/marketList' },
+  {
+    label: 'ChatBot',
+    href: '/chatbot',
+    children: [
+      {
+        label: 'KOL',
+        href: '/chatbot/KOL',
+        logo: 'wizard',
+      },
+      {
+        label: 'VIP',
+        href: '/chatbot/vip',
+        logo: 'documentation',
+      },
+    ],
+  },
 ];
 
 export default NAV_LINKS;

@@ -3,11 +3,11 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   images: {
-    domains: ['raw.githubusercontent.com'],
+    domains: ['raw.githubusercontent.com', 'cloudflare-ipfs.com'],
   },
   typescript: {
     ignoreBuildErrors: true,
-  }
+  },
 };
 
 module.exports = nextConfig;
