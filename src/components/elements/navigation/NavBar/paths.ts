@@ -8,7 +8,7 @@ const NAV_LINKS: ISubNav[] = [
     children: [
       {
         label: 'KOL',
-        href: '/chatbot/KOL',
+        href: '/chatbot/kol',
         logo: 'wizard',
       },
       {
