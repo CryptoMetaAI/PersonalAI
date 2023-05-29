@@ -3,16 +3,16 @@ import { ISubNav } from '../SubNav/SubNav';
 const NAV_LINKS: ISubNav[] = [
   { label: 'Home', href: '/' },
   {
-    label: 'ChatBot',
+    label: 'PersonalBot',
     href: '/chatbot',
     children: [
+      // {
+      //   label: 'KOL',
+      //   href: '/chatbot/kol',
+      //   logo: 'wizard',
+      // },
       {
-        label: 'KOL',
-        href: '/chatbot/kol',
-        logo: 'wizard',
-      },
-      {
-        label: 'VIP',
+        label: 'VIP Card',
         href: '/chatbot/vip',
         logo: 'documentation',
       },

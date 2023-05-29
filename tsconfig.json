@@ -17,6 +17,6 @@
     "incremental": true,
     "baseUrl": "./src"
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "src/components/templates/vip/lensVip/index.ts", "src/components/templates/vip/lensVip/lensvip.tsx", "pages/chatbot/vip.tsx"],
   "exclude": ["node_modules"]
 }

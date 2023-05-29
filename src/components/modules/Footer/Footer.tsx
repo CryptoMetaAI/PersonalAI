@@ -4,7 +4,7 @@ import { ExternalLinkIcon } from '@chakra-ui/icons';
 const Footer = () => {
   return (
     <Box textAlign={'center'} w="full" p={6}>
-      <Text>
+      {/* <Text>
         <Link href={'https://twitter.com/0xmetazen'} isExternal alignItems={'center'}>
           Buidler <ExternalLinkIcon />
         </Link>
@@ -12,7 +12,7 @@ const Footer = () => {
         <Link href={'https://github.com/syslink/GPTBot4Lens.git'} isExternal alignItems={'center'}>
           Github <ExternalLinkIcon />
         </Link>
-      </Text>
+      </Text> */}
     </Box>
   );
 };

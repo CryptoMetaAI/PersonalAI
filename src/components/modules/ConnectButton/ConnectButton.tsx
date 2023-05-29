@@ -8,7 +8,7 @@ const ConnectButton = () => {
   const { active, account, library, chainId, activate, deactivate } = useWeb3React();
 
   const injected = new InjectedConnector({
-    supportedChainIds: [137, 80001],
+    supportedChainIds: [5, 137, 80001],
   });
 
   async function connect() {
