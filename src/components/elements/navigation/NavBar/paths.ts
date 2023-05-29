@@ -6,11 +6,6 @@ const NAV_LINKS: ISubNav[] = [
     label: 'PersonalBot',
     href: '/chatbot',
     children: [
-      // {
-      //   label: 'KOL',
-      //   href: '/chatbot/kol',
-      //   logo: 'wizard',
-      // },
       {
         label: 'VIP Card',
         href: '/chatbot/vip',

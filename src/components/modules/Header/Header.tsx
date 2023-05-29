@@ -1,4 +1,4 @@
-import { Box, Container, Flex, HStack, Tooltip, Button } from '@chakra-ui/react';
+import { Box, Container, Flex, HStack } from '@chakra-ui/react';
 import { ColorModeButton, XNFTLogo, NavBar } from 'components/elements';
 import { ConnectButton } from '../ConnectButton';
 

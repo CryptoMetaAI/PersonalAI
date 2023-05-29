@@ -28,7 +28,7 @@ import BigNumber from 'bignumber.js';
 const LensVIP: FC = () => {
   const { account, library: web3, chainId } = useWeb3React();
   const [tokenList, setTokenList] = useState([]);
-  const [vipContract, setVipContract] = useState(null);
+  const [vipContract, setVipContract] = useState({methods:{}});
   const [telegramId, setTelegramId] = useState('');
   const [months, setMonths] = useState(1);
   const [isOpenning, setIsOpenning] = useState(false);
@@ -67,7 +67,9 @@ const LensVIP: FC = () => {
   }, []);
 
   useEffect(() => {
-    if (web3 === undefined || web3 == null) return;
+    if (web3 === undefined || web3 == null) {
+      return;
+    }
 
     const vipAddr = contractAddr[chainId].vipAddr;
     const vipContractObj = new web3.eth.Contract(vipABI, vipAddr);
@@ -75,16 +77,18 @@ const LensVIP: FC = () => {
   }, [web3]);
 
   useEffect(() => {
-    if (vipContract === undefined || vipContract == null) return;
-    const tokenURIList = []
+    if (vipContract === undefined || vipContract == null) {
+      return;
+    }
+    const tokenURIList: any[] = []
     let contractFunc = vipContract.methods['balanceOf'];
-    contractFunc(account).call({ from: account }).then(balance => {
+    contractFunc(account).call({ from: account }).then((balance: number) => {
       console.log('number of your NFTs', balance);
       contractFunc = vipContract.methods['tokenOfOwnerByIndex'];
       for (let i = 0; i < balance; i++) {
-        contractFunc(account, i).call({ from: account }).then(tokenId => {
+        contractFunc(account, i).call({ from: account }).then((tokenId: number) => {
           contractFunc = vipContract.methods['tokenURI'];
-          contractFunc(tokenId).call({from: account}).then(tokenURI => {
+          contractFunc(tokenId).call({from: account}).then((tokenURI: string) => {
             tokenURIList.push({tokenId, tokenURI});
             if (tokenURIList.length == balance) {
               tokenURIList.sort((a, b) => a.tokenId - b.tokenId)

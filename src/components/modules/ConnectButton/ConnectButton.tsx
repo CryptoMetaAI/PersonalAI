@@ -1,11 +1,11 @@
-import { Button, Text, HStack, Avatar, Tooltip } from '@chakra-ui/react';
+import { Button, Text, HStack, Tooltip } from '@chakra-ui/react';
 import { getEllipsisTxt } from 'utils/format';
 import React from 'react';
 import { InjectedConnector } from '@web3-react/injected-connector';
 import { useWeb3React } from '@web3-react/core';
 
 const ConnectButton = () => {
-  const { active, account, library, chainId, activate, deactivate } = useWeb3React();
+  const { active, account, activate, deactivate } = useWeb3React();
 
   const injected = new InjectedConnector({
     supportedChainIds: [5, 137, 80001],
