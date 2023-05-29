@@ -103,7 +103,6 @@ const LensVIP: FC = () => {
 
   useEffect(() => {
     if (vipContract === undefined || vipContract == null) return;
-    
     let contractFunc = vipContract.methods['userPayedNFT'];
     contractFunc(account).call({ from: account }).then(tokenId => {
       console.log('userPayedNFT', tokenId);
