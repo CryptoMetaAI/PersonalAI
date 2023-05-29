@@ -28,7 +28,7 @@ import BigNumber from 'bignumber.js';
 const LensVIP: FC = () => {
   const { account, library: web3, chainId } = useWeb3React();
   const [tokenList, setTokenList] = useState([]);
-  const [vipContract, setVipContract] = useState({methods:{}});
+  const [vipContract, setVipContract] = useState(null);
   const [telegramId, setTelegramId] = useState('');
   const [months, setMonths] = useState(1);
   const [isOpenning, setIsOpenning] = useState(false);
