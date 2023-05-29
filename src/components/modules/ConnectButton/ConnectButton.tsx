@@ -45,7 +45,7 @@ const ConnectButton = () => {
   }
 
   return (
-    <Tooltip label={'Current supported network: Arbitrum-One/Nova, Optimism and BSC-Testnet.'}>
+    <Tooltip label={'Current supported network: Goerli.'}>
       <Button onClick={() => wallet()} colorScheme="teal" variant="outline">
         Connect Wallet
       </Button>
